@@ -9,12 +9,12 @@ const Contact = () => {
         <h2 className='section__title'>Contact</h2>
         <div className=''>
         <a href={`mailto:${contact.email}`}>
-          <span type='button' className=' btn btn--outline'>
+          <span type='button' className='contact_btn btn btn--outline'>
             Email me: jeffreykunwang@gmail.com
           </span>
         </a>
         <a href={`mailto:${contact.email}`}>
-          <span type='button' className=' btn btn--outline'>
+          <span type='button' className='contact_btn btn btn--outline'>
             Call me: +1 718 419 9384
           </span>
         </a>

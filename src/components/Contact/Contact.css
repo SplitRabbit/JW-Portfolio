@@ -3,6 +3,10 @@
   width: 50%;
 }
 
+.contact_btn {
+  margin-top: 1.5em;
+}
+
 @media (max-width: 600px) {
   .contact {
     width: 100%;

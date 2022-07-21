@@ -1,11 +1,9 @@
 const header = {
-  // all the properties are optional - can be left empty or deleted
-  homepage: '',
+  homepage: 'https://splitrabbit.github.io/',
   title: 'JW.',
 }
 
 const about = {
-  // all the properties are optional - can be left empty or deleted
   name: 'Jeffrey Wang',
   role: 'Data Engineer',
   description:
@@ -16,7 +14,7 @@ const about = {
 const social = {
   linkedin: 'https://www.linkedin.com/in/jeffrey-wang-139375207/',
   github: 'https://github.com/SplitRabbit',
-  resume: '',
+  resume: 'https://github.com/SplitRabbit',
 }
 
 const projects = [

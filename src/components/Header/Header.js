@@ -1,4 +1,5 @@
 import { header } from '../../portfolio'
+import Pages from '../Pages/Pages'
 import Navbar from '../Navbar/Navbar'
 import './Header.css'
 
@@ -7,9 +8,10 @@ const Header = () => {
 
   return (
     <header className='header center'>
+      <Pages/>
       <h3>
         {homepage ? (
-          <a href={homepage} className='link'>
+          <a href={homepage} className='link center'>
             {title}
           </a>
         ) : (
