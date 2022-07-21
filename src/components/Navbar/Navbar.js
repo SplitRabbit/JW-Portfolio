@@ -4,6 +4,7 @@ import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import ResumeIcon from '@material-ui/icons/Description'
+import Resume from './Resume.pdf'
 import { ThemeContext } from '../../contexts/theme'
 import { social} from '../../portfolio'
 import './Navbar.css'
@@ -36,19 +37,16 @@ const Navbar = () => {
                   <LinkedInIcon />
                 </a>
               )}
-
-              {social.resume && (
-                <li className='nav__list-item'>
-                  <a
-                    href={social.resume}
-                    aria-label='resume'
-                    className='link link--icon'
-                  >
+              <li className='nav__list-item'>
+                <div>
+                  <a href={Resume} 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className='link link--icon'>
                     <ResumeIcon />
                   </a>
-                </li>
-              )}
-
+                </div>
+              </li>
 
             <button
             type='button'

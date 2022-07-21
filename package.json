@@ -1,8 +1,8 @@
 {
-  "name": "cleanfolio",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rajshekhar26.github.io/cleanfolio",
+  "homepage": "https://splitrabbit.github.io/portfolio",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
@@ -15,8 +15,7 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "uniqid": "^5.4.0",
-    "web-vitals": "^2.1.0",
-    "yarn": "^1.22.19"
+    "web-vitals": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start --openssl-legacy-provider",

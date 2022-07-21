@@ -8,8 +8,23 @@ const about = {
   role: 'Data Engineer',
   description:
     'I am an aspiring Full Stack Web Engineer currently working in Data Analytics/Engineering. I was born and raised in Brooklyn, New York and have been here my entire life.',
-  
 }
+
+const timelineData = [
+  {
+    text: 'Wrote my first blog post ever on Medium',
+    date: 'March 03 2017',
+    category: {
+        tag: 'medium',
+        color: '#018f69'
+    },
+    link: {
+        url:
+            'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
+        text: 'Read more'
+    }
+  },
+]
 
 const social = {
   linkedin: 'https://www.linkedin.com/in/jeffrey-wang-139375207/',
@@ -56,4 +71,4 @@ const contact = {
   email: 'jeffreykunwang@gmail.com',
 }
 
-export { header, about, projects, skills, contact, social}
+export { header, about, projects, skills, contact, social, timelineData}
