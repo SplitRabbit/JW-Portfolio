@@ -21,6 +21,8 @@ const Navbar = () => {
                 <li className='nav__list-item'>
                   <a
                     href={social.github}
+                    target="_blank" 
+                    rel="noreferrer"
                     aria-label='github'
                     className='link link--icon'
                   >
@@ -31,6 +33,8 @@ const Navbar = () => {
               {social.linkedin && (
                 <a
                   href={social.linkedin}
+                  target="_blank" 
+                  rel="noreferrer"
                   aria-label='linkedin'
                   className='link link--icon'
                 >

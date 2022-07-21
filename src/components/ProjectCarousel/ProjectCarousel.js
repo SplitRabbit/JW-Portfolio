@@ -2,13 +2,13 @@ import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// import uniqid from 'uniqid'
-// import GitHubIcon from '@material-ui/icons/GitHub'
-// import LaunchIcon from '@material-ui/icons/Launch'
-// import './ProjectContainer.css'
 
+import uniqid from 'uniqid'
+import { projects } from '../../portfolio'
+import ProjectContainer from '../ProjectContainer/ProjectContainer'
+import './Projects.css'
 
-const ProjectCarousel = ({ project }) => {
+const ProjectCarousel = (project) => {
     let settings = {
         dots: true,
         infinite: true,
@@ -21,7 +21,43 @@ const ProjectCarousel = ({ project }) => {
         <Slider {...settings}>
             <div className="card-wrapper">
                 <div className="card">
-                    Potato 1
+                <div className="card-wrapper">
+                        <div className='project card'>
+
+                            <h3>{project.name}</h3>
+
+                            <p className='project__description'>{project.description}</p>
+                            {project.stack && (
+                            <ul className='project__stack'>
+                                {project.stack.map((item) => (
+                                <li key={uniqid()} className='project__stack-item'>
+                                    {item}
+                                </li>
+                                ))}
+                            </ul>
+                            )}
+
+                            {project.sourceCode && (
+                            <a
+                                href={project.sourceCode}
+                                aria-label='source code'
+                                className='link link--icon'
+                            >
+                                <GitHubIcon />
+                            </a>
+                            )}
+
+                            {project.livePreview && (
+                            <a
+                                href={project.livePreview}
+                                aria-label='live preview'
+                                className='link link--icon'
+                            >
+                                <LaunchIcon />
+                            </a>
+                            )}
+                        </div>
+                </div>
                 </div>
             </div>
             <div className="card-wrapper">
@@ -46,47 +82,4 @@ const ProjectCarousel = ({ project }) => {
 export default ProjectCarousel
 
 
-
-
-// const ProjectContainer = ({ project }) => (
-
-//     <div className="card-wrapper">
-//         <div className="card">
-//             <div className='project'>
-//         <h3>{project.name}</h3>
-
-//         <p className='project__description'>{project.description}</p>
-//         {project.stack && (
-//         <ul className='project__stack'>
-//             {project.stack.map((item) => (
-//             <li key={uniqid()} className='project__stack-item'>
-//                 {item}
-//             </li>
-//             ))}
-//         </ul>
-//         )}
-
-//         {project.sourceCode && (
-//         <a
-//             href={project.sourceCode}
-//             aria-label='source code'
-//             className='link link--icon'
-//         >
-//             <GitHubIcon />
-//         </a>
-//         )}
-
-//         {project.livePreview && (
-//         <a
-//             href={project.livePreview}
-//             aria-label='live preview'
-//             className='link link--icon'
-//         >
-//             <LaunchIcon />
-//         </a>
-//         )}
-//             </div>
-//         </div>
-//     </div>
-// )
 

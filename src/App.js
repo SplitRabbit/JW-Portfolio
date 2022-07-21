@@ -7,6 +7,7 @@ import Skills from './components/Skills/Skills'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Contact from './components/Contact/Contact'
 import Timeline from './components/TimelineContainer/TimelineContainer'
+import ProjectCarousel from './components/ProjectCarousel/ProjectCarousel'
 import './App.css'
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <About />
         <Contact />
         <Projects />
+        <ProjectCarousel />
         <Skills />
         <Timeline />
       </main>
