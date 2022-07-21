@@ -1,0 +1,10 @@
+.contact {
+  flex-direction: column;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .contact {
+    width: 100%;
+  }
+}
