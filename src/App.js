@@ -6,6 +6,7 @@ import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Contact from './components/Contact/Contact'
+import Timeline from './components/TimelineContainer/TimelineContainer'
 import './App.css'
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
         <Contact />
         <Projects />
         <Skills />
+        <Timeline />
       </main>
 
       <ScrollToTop />
