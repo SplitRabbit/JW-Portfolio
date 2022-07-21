@@ -21,7 +21,6 @@ const App = () => {
         <About />
         <Contact />
         <Projects />
-        <ProjectCarousel />
         <Skills />
         <Timeline />
       </main>

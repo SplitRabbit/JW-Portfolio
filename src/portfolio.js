@@ -74,6 +74,30 @@ const projects = [
     stack: ['React'],
     sourceCode: '',
     livePreview: '',
+  },
+  {
+    name: 'Project 3',
+    description:
+      'A MERN stack application for information around this sports center',
+    stack: ['React'],
+    sourceCode: '',
+    livePreview: '',
+  },
+  {
+    name: 'Project 4',
+    description:
+      'A MERN stack application for information around this sports center',
+    stack: ['React'],
+    sourceCode: '',
+    livePreview: '',
+  },
+  {
+    name: 'Project 5',
+    description:
+      'A MERN stack application for information around this sports center',
+    stack: ['React'],
+    sourceCode: '',
+    livePreview: '',
   }
 ]
 
