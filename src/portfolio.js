@@ -1,5 +1,5 @@
 const header = {
-  homepage: 'https://splitrabbit.github.io/',
+  // homepage: 'https://splitrabbit.github.io/',
   title: 'JW.',
 }
 

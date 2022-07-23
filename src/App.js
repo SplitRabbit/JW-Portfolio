@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useState,useContext } from 'react'
 import { ThemeContext } from './contexts/theme'
 import Header from './components/Header/Header'
 import About from './components/About/About'
@@ -7,22 +7,19 @@ import Skills from './components/Skills/Skills'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Contact from './components/Contact/Contact'
 import Timeline from './components/TimelineContainer/TimelineContainer'
-import ProjectCarousel from './components/ProjectCarousel/ProjectCarousel'
 import './App.css'
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
+  const [mainPage, setmainPage] = useState([ <About key = {1}/>,<Contact key = {2}/>,<Projects key = {3}/>,<Skills key = {4}/>,<Timeline key = {5}/>]);
 
+  
   return (
     <div id='top' className={`${themeName} app`}>
-      <Header />
+      <Header mainPage = {mainPage} setmainPage = {setmainPage}/>
 
       <main>
-        <About />
-        <Contact />
-        <Projects />
-        <Skills />
-        <Timeline />
+        {mainPage}
       </main>
 
       <ScrollToTop />
