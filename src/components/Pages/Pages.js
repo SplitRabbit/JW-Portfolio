@@ -1,10 +1,7 @@
 import { useContext } from 'react'
 import { ThemeContext } from '../../contexts/theme'
-import { social} from '../../portfolio'
-import About from '../About/About'
 import Projects from '../Projects/Projects'
 import Skills from '../Skills/Skills'
-import Contact from '../Contact/Contact'
 import Timeline from '../TimelineContainer/TimelineContainer'
 import './Pages.css'
 
@@ -13,13 +10,10 @@ const Pages = ({mainPage,setmainPage}) => {
 
  function handlePageChange(event) {
     if (event.target.id === 'timeline') {
-        console.log(event.target.id)
         setmainPage([<Timeline key={1}/>]);
     }else if (event.target.id === 'projects') {
-        console.log(event.target.id)
         setmainPage([<Projects key={1}/>]);
     }else if (event.target.id === 'skills') {
-        console.log(event.target.id)
         setmainPage([<Skills key={1}/>]);
     };
  };
