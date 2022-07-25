@@ -1,5 +1,7 @@
 import { contact } from '../../portfolio'
 import './Contact.css'
+// delete after grading
+import ContactForm from '../ContactForm/ContactForm'
 
 const Contact = () => {
   if (!contact.email) return null
@@ -18,6 +20,14 @@ const Contact = () => {
             Call me: +1 718 419 9384
           </span>
         </a>
+        {/* Delete after graded
+        <form>      
+          <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+          <input name="email" type="text" class="feedback-input" placeholder="Email" />
+          <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+          <input type="submit" value="SUBMIT"/>
+        </form> */}
+        <ContactForm />
       </div>
 
       </section>
