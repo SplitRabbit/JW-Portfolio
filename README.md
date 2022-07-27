@@ -12,7 +12,7 @@
   - [Tests](#tests)
   - [Questions](#questions)
   ## Installation
-  💾 You can install this application using 'npm i' for necessary applications, and 'npm start' to start the server. Live application is deployed here:
+  💾 You can install this application using 'npm i' for necessary applications, and 'npm start' to start the server. Live application is deployed here: https://jeffreykunwang-portfolio.herokuapp.com/
   ## Usage
   💻 This application is meant to display my knowledge of react, css and javascript while providing information about my professional career.
   
