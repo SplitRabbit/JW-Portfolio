@@ -1,7 +1,5 @@
 import { contact } from '../../portfolio'
 import './Contact.css'
-// delete after grading
-import ContactForm from '../ContactForm/ContactForm'
 
 const Contact = () => {
   if (!contact.email) return null
