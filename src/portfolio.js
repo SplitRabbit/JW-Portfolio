@@ -12,44 +12,39 @@ const about = {
 
 const timelineData = [
   {
-    text: 'Wrote my first blog post ever on Medium',
-    date: 'March 03 2017',
+    text: 'Completion of Columbia\'s Full-Stack Web Development Bootcamp',
+    date: 'August 03 2022',
     category: {
         tag: 'medium',
         color: '#018f69'
-    },
-    link: {
-        url:
-            'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
-        text: 'Read more'
     }
   },
   {
-    text: 'Wrote my first blog post ever on Medium',
-    date: 'March 04 2017',
+    text: 'Promotion/Transition to Data Analyst At Fi/BarkingLabs',
+    date: 'January 03 2022',
     category: {
         tag: 'medium',
         color: '#018f69'
-    },
-    link: {
-        url:
-            'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
-        text: 'Read more'
     }
   },
   {
-    text: 'Wrote my first blog post ever on Medium',
-    date: 'March 05 2017',
+    text: 'Graduated Baruch College with a Bachelor of Business Administration',
+    date: 'January 01 2022',
     category: {
         tag: 'medium',
         color: '#018f69'
-    },
-    link: {
-        url:
-            'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
-        text: 'Read more'
     }
   },
+  {
+    text: 'Hired as Operations Associate At Fi/BarkingLabs',
+    date: 'July 22 2020',
+    category: {
+        tag: 'medium',
+        color: '#018f69'
+    }
+  },
+
+
 ]
 
 const social = {

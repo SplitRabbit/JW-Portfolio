@@ -7,18 +7,18 @@ const Contact = () => {
   return (
       <section className='section contact left' id='contact'>
         <h2 className='section__title'>Contact</h2>
-        <div className=''>
+        <ul>   
         <a href={`mailto:${contact.email}`}>
-          <span type='button' className='contact_btn btn btn--outline'>
+          <li type='button' className='contact_btn btn btn--outline'>
             Email me: jeffreykunwang@gmail.com
-          </span>
+          </li>
         </a>
         <a href={`mailto:${contact.email}`}>
-          <span type='button' className='contact_btn btn btn--outline'>
+          <li type='button' className='contact_btn btn btn--outline'>
             Call me: +1 718 419 9384
-          </span>
+          </li>
         </a>
-      </div>
+      </ul>
       </section>
 
   )

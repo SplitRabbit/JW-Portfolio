@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext,useState } from 'react'
 import Brightness2Icon from '@material-ui/icons/Brightness2'
 import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 import GitHubIcon from '@material-ui/icons/GitHub'
@@ -11,6 +11,61 @@ import './Navbar.css'
 
 const Navbar = () => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
+  const [shown, setShown] = useState(false);
+  const modalBody = () => (
+    <div
+        style={{
+            backgroundColor: '#fff',
+            flexDirection: 'column',
+            overflow: 'hidden',
+
+            /* Fixed position */
+            left: 0,
+            position: 'fixed',
+            top: 0,
+
+            /* Take full size */
+            height: '100%',
+            width: '100%',
+
+            /* Displayed on top of other elements */
+            zIndex: 9999,
+        }}
+    >
+        <div
+            style={{
+                alignItems: 'center',
+                backgroundColor: '#000',
+                color: '#fff',
+                display: 'flex',
+                padding: '.5rem',
+            }}
+        >
+            <div style={{ marginRight: 'auto' }}>sample-file-name.pdf</div>
+            <button
+                style={{
+                    backgroundColor: '#357edd',
+                    border: 'none',
+                    borderRadius: '4px',
+                    color: '#ffffff',
+                    cursor: 'pointer',
+                    padding: '8px',
+                }}
+                onClick={() => setShown(false)}
+            >
+                Close
+            </button>
+        </div>
+        <div
+            style={{
+                flexGrow: 1,
+                overflow: 'auto',
+            }}
+        >
+            <Viewer fileUrl={fileUrl} />
+        </div>
+    </div>
+);
 
   return (
     <nav className='center nav'>
@@ -42,14 +97,9 @@ const Navbar = () => {
                 </a>
               )}
               <li className='nav__list-item'>
-                <div>
-                  <a href={Resume} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className='link link--icon'>
+                <button onClick={() => setShown(true)} className='link link--icon'>
                     <ResumeIcon />
-                  </a>
-                </div>
+                </button>
               </li>
 
             <button

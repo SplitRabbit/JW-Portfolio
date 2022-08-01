@@ -7,7 +7,7 @@ const TimelineItem = ({ data }) => (
                 {data.category.tag}
             </span>
             <time>{data.date}</time>
-            <p>{data.text}</p>
+            <p id='timeline-item-content'>{data.text}</p>
             {data.link && (
                 <a
                     href={data.link.url}
