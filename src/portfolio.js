@@ -55,12 +55,12 @@ const social = {
 
 const projects = [
   {
-    name: 'Social-Network-React',
+    name: 'Slytherin-Social',
     description:
       'A MERN stack application meant to demonstrate our ability to build a sophisticated and functional full-stack application.',
     stack: ['MongoDB', 'Express', 'React','NoSQL'],
     sourceCode: 'https://github.com/slytherin-CU-VIRT-BO/slytherin-social-app',
-    livePreview: 'https://github.com/slytherin-CU-VIRT-BO/slytherin-social-app',
+    livePreview: 'https://slytherin-social.herokuapp.com/',
   },
   {
     name: 'Brooklyn Badminton',

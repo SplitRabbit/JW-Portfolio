@@ -4,7 +4,6 @@ import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import ResumeIcon from '@material-ui/icons/Description'
-import Resume from '../../assets/Resume.pdf'
 import { ThemeContext } from '../../contexts/theme'
 import { social} from '../../portfolio'
 import './Navbar.css'
@@ -62,7 +61,7 @@ const Navbar = () => {
                 overflow: 'auto',
             }}
         >
-            <Viewer fileUrl={fileUrl} />
+            <Viewer fileUrl={'../../assets/Resume.pdf'} />
         </div>
     </div>
 );
@@ -100,6 +99,7 @@ const Navbar = () => {
                 <button onClick={() => setShown(true)} className='link link--icon'>
                     <ResumeIcon />
                 </button>
+                {shown && ReactDOM.createPortal(modalBody(), document.body)}
               </li>
 
             <button
