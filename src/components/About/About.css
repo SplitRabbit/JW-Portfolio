@@ -4,9 +4,9 @@
 }
 
 .about_image {
-  width: 30%;
+  width: 700px;
   position:absolute;
-  right: 10%;
+  right: 0;
   z-index:0;
 }
 

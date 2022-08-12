@@ -1,15 +1,21 @@
-import { useState} from 'react'
+import { useContext} from 'react'
 import { header } from '../../portfolio'
-import Pages from '../Pages/Pages'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
 import Projects from '../Projects/Projects'
 import Skills from '../Skills/Skills'
+import Sidenav from '../Sidenav/Sidenav'
 import Timeline from '../TimelineContainer/TimelineContainer'
 import './Header.css'
+import { ThemeContext } from '../../contexts/theme'
+import Brightness2Icon from '@material-ui/icons/Brightness2'
+import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
+
 
 
 const Header = ({mainPage,setmainPage}) => {
+  const [{ themeName, toggleTheme }] = useContext(ThemeContext)
+  useContext(ThemeContext)
   const { homepage, title } = header;
   
   function handlePageChange(event) {
@@ -26,22 +32,30 @@ const Header = ({mainPage,setmainPage}) => {
   let linkEl = document.getElementsByClassName('link');
    for (let i = 0; i<linkEl.length; i++) {
     if (linkEl[i].id === event.target.id) {
-      linkEl[i].style.color = 'var(--clr-primary)'
+      linkEl[i].classList.add("active-link")
     } else {
-      linkEl[i].style.color = 'var(--clr-fg)'
+      linkEl[i].classList.remove("active-link")
     }
    }
 };
 
   return (
     <header className='header center'>
+      <Sidenav handlePageChange = {handlePageChange}/>
       <h3>
-          <div  className='link center' id='home'  
+          <div  className='active-link link center' id='home'  
           onClick={handlePageChange}>
             {title}
           </div> 
       </h3>
-      <Pages handlePageChange = {handlePageChange}/> 
+      <button
+        type='button'
+        onClick={toggleTheme}
+        className='btn btn--icon nav__theme nav__list-item '
+        aria-label='toggle theme'
+      >
+        {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
+      </button>
     </header> 
   )
 }

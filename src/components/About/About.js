@@ -1,4 +1,4 @@
-import CoverPhoto from './cover_photo.png'
+import CoverPhoto from '../../assets/jeffrey_08.png'
 import { about } from '../../portfolio'
 import './About.css'
 
