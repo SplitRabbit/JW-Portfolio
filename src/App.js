@@ -14,13 +14,19 @@ const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
   const homePage = [ <About key = {1}/>,<Contact key = {2}/>]
   const [mainPage, setmainPage] = useState(homePage);
+  const [navState,setnavState] = useState(false);
+  let topNavStyle = { marginLeft: navState ? "250px" : "0" };
+  let mainNavStyle = {opacity: navState ? "0.5" : "1"}
 
-  
   return (
-    <div id='top' className={`${themeName} app`}>
-      <Header mainPage = {mainPage} setmainPage = {setmainPage}/>
-
-      <main>
+    <div id='top' className={`${themeName} app`} style={topNavStyle}>
+      <Header 
+        mainPage = {mainPage} 
+        setmainPage = {setmainPage}
+        navState = {navState}
+        setnavState = {setnavState}
+      />
+      <main style={mainNavStyle}>
         {mainPage}
       </main>
       <Footer />

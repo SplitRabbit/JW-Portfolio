@@ -1,4 +1,4 @@
-import { useContext} from 'react'
+import { useContext,useState} from 'react'
 import { header } from '../../portfolio'
 import About from '../About/About'
 import Contact from '../Contact/Contact'
@@ -13,11 +13,28 @@ import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 
 
 
-const Header = ({mainPage,setmainPage}) => {
+const Header = ({navState,setnavState,mainPage,setmainPage}) => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   useContext(ThemeContext)
   const { homepage, title } = header;
-  
+  const openNavClick = (event) => {
+    event.preventDefault();
+    setnavState(true);
+    document.addEventListener("keydown", handleEscKey);
+  };
+
+  const closeNavClick = (event) => {
+    event.preventDefault();
+    setnavState(false);
+    document.removeEventListener("keydown", handleEscKey);
+  };
+
+  const handleEscKey = (event) => {
+    if (event.key === "Escape") {
+      this.closeNav();
+    }
+  };
+
   function handlePageChange(event) {
     console.log("User now on",event.target.id);
   if (event.target.id === 'home') {
@@ -39,9 +56,16 @@ const Header = ({mainPage,setmainPage}) => {
    }
 };
 
+
   return (
     <header className='header center'>
-      <Sidenav handlePageChange = {handlePageChange}/>
+      <Sidenav  
+        navState = {navState}
+        openNavClick = {openNavClick}
+        closeNavClick = {closeNavClick}
+        handleEscKey = {handleEscKey}
+        handlePageChange = {handlePageChange}
+      />
       <h3>
           <div  className='active-link link center' id='home'  
           onClick={handlePageChange}>
