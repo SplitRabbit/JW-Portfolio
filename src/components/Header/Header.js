@@ -1,7 +1,6 @@
 import { useContext,useState} from 'react'
 import { header } from '../../portfolio'
-import About from '../About/About'
-import Contact from '../Contact/Contact'
+import Homepage from '../Homepage/Homepage'
 import Projects from '../Projects/Projects'
 import Skills from '../Skills/Skills'
 import Sidenav from '../Sidenav/Sidenav'
@@ -38,7 +37,7 @@ const Header = ({navState,setnavState,mainPage,setmainPage}) => {
   function handlePageChange(event) {
     console.log("User now on",event.target.id);
   if (event.target.id === 'home') {
-      setmainPage([ <About key = {1}/>,<Contact key = {2}/>]);
+      setmainPage([ <Homepage key = {1}/>]);
   }else if (event.target.id === 'timeline') {
       setmainPage([<Timeline key={1}/>]);
   }else if (event.target.id === 'projects') {
