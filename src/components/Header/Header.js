@@ -12,7 +12,7 @@ import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
 
 
 
-const Header = ({navState,setnavState,mainPage,setmainPage}) => {
+const Header = ({navState,setnavState,setmainPage}) => {
   const [{ themeName, toggleTheme }] = useContext(ThemeContext)
   useContext(ThemeContext)
   const { homepage, title } = header;

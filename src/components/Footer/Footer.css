@@ -1,5 +1,6 @@
 #footer-label {
-    color:lightgray
+    color:lightgray;
+    font-size: 15px;
 }
 
 .footer {
@@ -8,4 +9,11 @@
     width: 95%;
     margin: 0 auto;
     justify-content: space-between;
+}
+
+@media (max-width: 450px) {
+    .footer {
+        position: absolute;
+        bottom:0;
+    }
 }

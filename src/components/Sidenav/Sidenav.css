@@ -54,5 +54,6 @@
 .sidenav-item {
   margin-top: 10%;
   margin-left: 10%;
-  font-size: 35px
+  font-size: 35px;
+  white-space: nowrap;
 }

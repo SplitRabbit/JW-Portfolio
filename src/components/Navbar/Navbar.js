@@ -3,7 +3,8 @@ import { social} from '../../portfolio'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import ResumeIcon from '@material-ui/icons/Description'
-
+import PhoneIcon from '@material-ui/icons/Phone'
+import EmailIcon from '@material-ui/icons/Email'
 
 import './Navbar.css'
 
@@ -81,16 +82,45 @@ return (
               </li>
             )}
             {social.linkedin && (
-              <a
-                href={social.linkedin}
-                target="_blank" 
-                rel="noreferrer"
-                aria-label='linkedin'
-                className='link link--icon'
-              >
-                <LinkedInIcon />
-              </a>
+              <li className='nav__list-item'>
+                <a
+                  href={social.linkedin}
+                  target="_blank" 
+                  rel="noreferrer"
+                  aria-label='linkedin'
+                  className='link link--icon'
+                >
+                  <LinkedInIcon />
+                </a>
+              </li>
             )}
+            {social.email && (
+              <li className='nav__list-item'>
+                <a
+                  href={`mailto:${social.email}`}
+                  target="_blank" 
+                  rel="noreferrer"
+                  aria-label='email'
+                  className='link link--icon'
+                >
+                  <EmailIcon />
+                </a>
+              </li>
+            )}
+            {social.phone && (
+              <li className='nav__list-item'>
+                <a
+                  href={`tel:${social.phone}`}
+                  target="_blank" 
+                  rel="noreferrer"
+                  aria-label='phone'
+                  className='link link--icon'
+                >
+                  <PhoneIcon />
+                </a>
+              </li>
+            )}
+
             <li className='nav__list-item'>
               <button onClick={() => setShown(true)} className='link link--icon'>
                   <ResumeIcon />
@@ -98,9 +128,8 @@ return (
               {shown && ReactDOM.createPortal(modalBody(), document.body)}
             </li>
     </ul>
-
   </nav>
-)
-}
+)}
+
 
 export default Navbar

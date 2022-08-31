@@ -51,6 +51,8 @@ const social = {
   linkedin: 'https://www.linkedin.com/in/jeffrey-wang-139375207/',
   github: 'https://github.com/SplitRabbit',
   resume: 'https://github.com/SplitRabbit',
+  email: 'jeffreykunwang@gmail.com',
+  phone: '+17184199384'
 }
 
 const projects = [
@@ -112,8 +114,4 @@ const skills = [
   'Node'
 ]
 
-const contact = {
-  email: 'jeffreykunwang@gmail.com',
-}
-
-export { header, about, projects, skills, contact, social, timelineData}
+export { header, about, projects, skills, social, timelineData}
