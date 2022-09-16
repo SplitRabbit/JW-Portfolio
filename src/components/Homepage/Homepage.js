@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import CoverPhoto from '../../assets/jeffrey_08.png'
+import CoverPhoto from '../../assets/jeffrey_10.png'
 import { about } from '../../portfolio'
 import './Homepage.css'
 
