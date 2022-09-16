@@ -4,7 +4,6 @@ import './Footer.css'
 
 
 const Footer = () => {
-const { homepage, title } = header;
   return (
     <header className='footer center'>
         <Navbar />

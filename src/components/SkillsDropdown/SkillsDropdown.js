@@ -1,47 +1,46 @@
-import {useState} from 'react'
-import CoverPhoto from '../../assets/jeffrey_08.png'
-import { about,contact } from '../../portfolio'
+import uniqid from 'uniqid'
 import './SkillsDropdown.css'
 
-const Homepage = () => {
-  const [contacts, setcontacts] = useState('')
-  const { name, role, description, resume } = about
+const ProjectContainer = ({ project }) => (
+  <div className="card-wrapper">
+  <div className="card">
 
-  return (
-    <div className='homepage'>
-      <img className='about_image' alt='Portrait with Dog' src={CoverPhoto}  />
-      <div className='about'>
-        {name && (
-          <h1 className='about__intro'>
-            <div>{"Hi, I'm "}</div>
-            <div className='about__name'>{name}.</div>
-          </h1>
-        )}
-                {role && <h2 className='about__role'>A {role}.</h2>}
-        <p className='about__desc'>{description && description}</p>
-        
-        </div>
-      {contact.email && (
-        <section className='section contact left' id='contact'>
-            <h2 className='section__title'>Contact</h2>
-            <ul>   
-            <a href={`mailto:${contact.email}`}>
-              <li type='button' className='contact_btn btn btn--outline'>
-                Email me: jeffreykunwang@gmail.com
+      <div className='project'>
+        <h3>{project.name}</h3>
+
+        <p className='project__description'>{project.description}</p>
+        {project.stack && (
+          <ul className='project__stack'>
+            {project.stack.map((item) => (
+              <li key={uniqid()} className='project__stack-item'>
+                {item}
               </li>
-            </a>
-            <a href={`mailto:${contact.email}`}>
-              <li type='button' className='contact_btn btn btn--outline'>
-                Call me: +1 718 419 9384
-              </li>
-            </a>
+            ))}
           </ul>
-        </section>
         )}
-    </div>
 
-  )
-};
+        {project.sourceCode && (
+          <a
+            href={project.sourceCode}
+            aria-label='source code'
+            className='link link--icon'
+          >
+            <GitHubIcon />
+          </a>
+        )}
 
+        {project.livePreview && (
+          <a
+            href={project.livePreview}
+            aria-label='live preview'
+            className='link link--icon'
+          >
+            <LaunchIcon />
+          </a>
+        )}
+      </div>
+      </div>
+</div>
+)
 
-export default Homepage;
+export default ProjectContainer

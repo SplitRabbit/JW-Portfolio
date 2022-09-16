@@ -1,10 +1,10 @@
 import {useState} from 'react'
 import CoverPhoto from '../../assets/jeffrey_08.png'
-import { about,contact } from '../../portfolio'
+import { about } from '../../portfolio'
 import './Homepage.css'
 
 const Homepage = () => {
-  const { name, role, description, resume } = about
+  const { name, role, description } = about
 
   return (
     <div className='homepage'>
