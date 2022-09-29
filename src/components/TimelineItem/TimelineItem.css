@@ -186,17 +186,25 @@
     .timeline-item-content .tag {
         width: calc(100% - 10px);
         text-align: center;
+        font-size: 10px;
     }
 
     .timeline-item-content time {
         margin-top: 20px;
+        font-size: 10px;
     }
 
     .timeline-item-content a {
         text-decoration: underline;
+        font-size: 10px;
+    }
+
+    .timeline-item-content p {
+        font-size: 12px;
     }
 
     .timeline-item-content a::after {
         display: none;
     }
 }
+
