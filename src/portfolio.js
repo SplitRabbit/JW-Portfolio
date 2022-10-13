@@ -65,7 +65,7 @@ const projects = [
     livePreview: 'https://slytherin-social.herokuapp.com/',
   },
   {
-    name: 'Brooklyn Badminton',
+    name: 'Brooklyn Badminton (In Progress)',
     description:
       'A MERN stack application for information around this sports center',
     stack: ['React'],
@@ -73,28 +73,28 @@ const projects = [
     livePreview: '',
   },
   {
-    name: 'Project 3',
+    name: 'Weather API',
     description:
-      'A MERN stack application for information around this sports center',
-    stack: ['React'],
-    sourceCode: '',
+      'Weather Reporting and forecasting. This weather reporting interface fetches api responses for the requested cities and pulls up the current weather as well as the 5 day forecast for the next 5 days. Search history will be saved in local storage and will display on the screen as a search history. You can then click on those histories and click them to research for the weather for that specific city.',
+    stack: ['Javascript,HTML'],
+    sourceCode: 'https://github.com/SplitRabbit/Weather',
+    livePreview: 'https://splitrabbit.github.io/Weather/',
+  },
+  {
+    name: 'Social Network API',
+    description:
+      'Backend Development for MongoDB for a basic social network.',
+    stack: ['Javascript'],
+    sourceCode: 'https://github.com/SplitRabbit/social-network-api',
     livePreview: '',
   },
   {
-    name: 'Project 4',
+    name: 'Coding Quiz',
     description:
-      'A MERN stack application for information around this sports center',
-    stack: ['React'],
-    sourceCode: '',
-    livePreview: '',
-  },
-  {
-    name: 'Project 5',
-    description:
-      'A MERN stack application for information around this sports center',
-    stack: ['React'],
-    sourceCode: '',
-    livePreview: '',
+      'A frontend application with hardcoded questions to test your knowledge on basic coding.',
+    stack: ['Javascript,HTML,CSS'],
+    sourceCode: 'https://github.com/SplitRabbit/Quiz-Form',
+    livePreview: 'https://splitrabbit.github.io/Quiz-Form/',
   }
 ]
 
